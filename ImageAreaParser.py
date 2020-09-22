@@ -35,6 +35,8 @@ class Parse(HTMLParser):
       for k,v in attrs:
         if k in ["title","id","rel","href","coords"]:
           row[k] = v
+          if k=="href":
+            row[k] = "http://www.documentatie.org" + row[k] # prepend to make absolute URL
 
           m = re.findall(r"Ob\d+n", v) 
           for r in m:

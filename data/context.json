@@ -1,6 +1,6 @@
 { 
 "@context": {
-    "uds": "https://documentatie.org/def/",
+    "uds": "http://documentatie.org/def/",
     "s": "https://schema.org/",
     "foaf": "http://xmlns.com/foaf/spec/",
     "image": { "@id": "s:image", "@type": "@id" },

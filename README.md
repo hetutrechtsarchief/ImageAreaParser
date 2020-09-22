@@ -2,14 +2,24 @@
 
 # Usage
 ```bash
-./ImageAreaParser.py --html data/ZplaatHUA.catnr.123916-links.htm > data/ZplaatHUA.catnr.123916-links.json
+# first install jsonld and raptor: 
+#   npm install -g jsonld-cli
+#   npm install -g raptor
+
+./run.sh
 ```
 # Input
-[ZplaatHUA.catnr.123916-links.htm](data/ZplaatHUA.catnr.123916-links.htm)
+[htm](data/ZplaatHUA.catnr.123916-links.htm):
 
 <img src="doc/Screenshot 2020-09-22 at 09.18.49.JPG" width="500">
 
 # Output
-[ZplaatHUA.catnr.123916-links.json](data/ZplaatHUA.catnr.123916-links.json)
+[json](data/ZplaatHUA.catnr.123916-links.json):
 
 <img src="doc/Screenshot 2020-09-22 at 09.19.04.JPG" width="500">
+
+---
+
+[turtle](data/ZplaatHUA.catnr.123916-links.json):
+
+<img src="doc/Screenshot 2020-09-22 at 23.02.26.JPG" width="500">
