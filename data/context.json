@@ -1,0 +1,20 @@
+{ 
+"@context": {
+    "uds": "https://documentatie.org/def/",
+    "s": "https://schema.org/",
+    "foaf": "http://xmlns.com/foaf/spec/",
+    "image": { "@id": "s:image", "@type": "@id" },
+    "modifiedDate": "s:dateModified",
+    "modifiedBy": "foaf:nick",
+    "rows": {
+      "@container": "@set",
+      "@id": "uds:imageSelection"
+    },
+    "ObjNr": "uds:objNr",
+    "coords": "uds:coords",
+    "href": { "@id": "uds:href", "@type": "@id" },
+    "title": "uds:title"
+    }
+
+}
+

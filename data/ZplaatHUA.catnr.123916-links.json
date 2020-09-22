@@ -1,5 +1,7 @@
-{
-    "@context": "context.json",
+{ 
+  "@context": "context.json", 
+  "@graph": {
+    
     "image": "ZplaatHUA.catnr.123916.jpg",
     "modifiedBy": "jp0212 ",
     "modifiedDate": "Wed Feb 29 16:58:18 2012 ",
@@ -118,4 +120,5 @@
             "title": "Boterstraat 26 - gesloopt 1878"
         }
     ]
+  }
 }

@@ -4,6 +4,7 @@ import xml.parsers.expat
 import json,sys,os,argparse,time,re
 from html.parser import HTMLParser
 import logging
+import datetime
 
 class Parse(HTMLParser):
   
@@ -12,11 +13,11 @@ class Parse(HTMLParser):
 
     m = re.findall(r"#\$AUTHOR:(.*)", data) 
     for r in m:
-      obj["modifiedBy"] = r
+      obj["modifiedBy"] = r.strip()
 
-    m = re.findall(r"#\$DATE:(.*)", data) 
+    m = re.findall(r"#\$DATE:(.*)", data)
     for r in m:
-      obj["modifiedDate"] = r
+      obj["modifiedDate"] = r.strip()
 
   def handle_starttag(self, name, attrs):
     global obj
@@ -58,9 +59,7 @@ obj = {
 }
 
 # open xml file and read lines
-with open(args.html, 'r') as file:
-  # print('{ "@context": "context.json", "@graph": [')
-  
+with open(args.html, 'r') as file:  
   for line in file:
     xml = Parse()
     xml.feed(line)
