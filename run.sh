@@ -12,3 +12,4 @@ rapper -i nquads $BASE.nq -o turtle $BASE.nq \
   -f 'xmlns:def="http://documentatie.org/def/"' \
 > $BASE.ttl 
 
+echo $BASE.ttl 

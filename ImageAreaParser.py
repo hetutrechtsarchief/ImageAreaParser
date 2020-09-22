@@ -4,7 +4,7 @@ import xml.parsers.expat
 import json,sys,os,argparse,time,re
 from html.parser import HTMLParser
 import logging
-import datetime
+from datetime import datetime
 
 class Parse(HTMLParser):
   
@@ -16,8 +16,9 @@ class Parse(HTMLParser):
       obj["modifiedBy"] = r.strip()
 
     m = re.findall(r"#\$DATE:(.*)", data)
-    for r in m:
-      obj["modifiedDate"] = r.strip()
+    for r in m: 
+      date = datetime.strptime(r.strip(), "%a %b %d %H:%M:%S %Y") # Wed Feb 29 16:58:18 2012
+      obj["modifiedDate"] = date.isoformat()
 
   def handle_starttag(self, name, attrs):
     global obj
@@ -67,4 +68,3 @@ with open(args.html, 'r') as file:
     xml.feed(line)
 
 print(json.dumps(obj, indent=4, sort_keys=True, ensure_ascii=False))
-
