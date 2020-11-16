@@ -45,14 +45,10 @@ if [ "$STATUS" == "finished" ]; then
     curl -s --request GET -H 'Content-Type: application/json' -H "Authorization: Bearer $TRIPLY_TOKEN" "$API/datasets/$TRIPLY_USER/$TRIPLY_DATASET/graphs" > $JSON
 
     graphId=`ggrep -Pzo '"graphName": "'$graph'",\n\s*"id": "(.*?)"' $JSON | tail -1 | sed 's/\s*"id": "//' | sed 's/"//' | tr '\0' '\n' ` 
-
     graphId=`echo $graphId | sed 's/ *$//g'`   # trim
 
-
     kladblokId=`ggrep -Pzo '"graphName": ".*?kladblok",\n\s*"id": "(.*?)"' $JSON | tail -1 | sed 's/\s*"id": "//' | sed 's/"//' | tr '\0' '\n'`
-
     kladblokId=`echo $kladblokId | sed 's/ *$//g'`   # trim
-
 
     if [ ! -z "$kladblokId" ]; then
       echo "Remove kladblok graph with id $kladblokId"
