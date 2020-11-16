@@ -37,7 +37,6 @@ done
 
 if [ "$STATUS" == "error" ]; then
   echo "error!"
-  # mysql mi2rdf -h mi2rdf-database -u $MYSQL_USER --password=$MYSQL_PASSWORD -e "UPDATE datasets SET state='error' WHERE guid='$guid'"
 fi
 
 if [ "$STATUS" == "finished" ]; then
