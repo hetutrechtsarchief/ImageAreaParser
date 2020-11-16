@@ -1,3 +1,5 @@
+#based on https://github.com/netwerk-digitaal-erfgoed/mi2rdf/blob/master/consumer/onmessage.sh by Bob Coret
+
 # 5 minuten
 MAXTRIES=300
 
