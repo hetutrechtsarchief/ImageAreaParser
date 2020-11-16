@@ -1,19 +1,22 @@
 { 
 "@context": {
+    "@base": "https://documentatie.org/id/",
     "uds": "http://documentatie.org/def/",
-    "s": "https://schema.org/",
+    "sdo": "https://schema.org/",
     "foaf": "http://xmlns.com/foaf/spec/",
-    "image": { "@id": "s:image", "@type": "@id" },
-    "modifiedDate": "s:dateModified",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "image": { "@id": "sdo:image", "@type": "@id" },
+    "modifiedDate": "sdo:dateModified",
     "modifiedBy": "foaf:nick",
+    "id": "@id",
     "rows": {
       "@container": "@set",
       "@id": "uds:imageSelection"
     },
-    "ObjNr": "uds:objNr",
+    "ObjNr": { "@id": "uds:ObjNr", "@type": "@id" },
     "coords": "uds:coords",
     "href": { "@id": "uds:href", "@type": "@id" },
-    "title": "uds:title"
+    "title": "rdfs:label"
     }
 
 }
